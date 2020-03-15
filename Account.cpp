@@ -3,7 +3,7 @@
 Account::Account();
  
 
-Account::payIn(float a) {
+bool Account::payIn(float a) {
 	float depositAmount;
 	depositAmount = a;
 	cout << "Amount to deposit: " << endl;
