@@ -4,18 +4,29 @@ float accountBalance = 0.0;
 int accountNumber = 0;
 
 Account::payIn(float a) {
-	float amount;
+	float depositAmount;
 	cout << "Amount to deposit:" << endl;
-	cin >> amount;
-	amount = amount + accountBalance;
-	return amount;
+	cin >> depositAmount;
+	if (depositAmount > 0) {
+		accountBalance= accountBalance + depositAmount;
+	}
+	if (accountBalance > 0) {
+	
+		return true;
+	}
+	else return false;
 };
 
 Account::payOut(float) {
-	float amount;
+	float withdrawAmount;
 	cout << "Amount to withdraw:" << endl;
-	cin >> amount;
-	amount = accountBalance - amount;
-	return amount;
+	cin >> withdrawAmount;
+	if (withdrawAmount > 0) {
+		accountBalance = accountBalance - withdrawAmount;
+	}
+	if (accountBalance > 0) {
+		return true;
+	}
+	else return false;
 
 }
