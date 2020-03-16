@@ -1,12 +1,14 @@
 #pragma once
-class Account
-{public:
-	int accountNumber = 0;;
-	float accountBalance = 0.0;
-	bool payIn();
+class Account{
+
+public:
+	int accountNumber;
+	float accountBalance;
+	bool payIn(float a);
 	bool payOut();
+	Account();
 private:
-	int secretNumber = secretNumber++;
+	int secretNumber;
 	
 };
 

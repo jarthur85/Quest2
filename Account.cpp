@@ -1,9 +1,13 @@
 #include "Account.h"
 
-Account::Account();
- 
+/*Account::Account(){
+	depositAmount = 0;
+	accountBalance = 0;
+	accountNumber = accountNumber++;
+};
 
-bool Account::payIn(float a) {
+ 
+/*bool Account::payIn(float a) {
 	float depositAmount;
 	depositAmount = a;
 	cout << "Amount to deposit: " << endl;
