@@ -1,14 +1,17 @@
 #pragma once
-class Account{
+#include <iostream>
+
+class Account {
 
 public:
+	Account();
+
 	int accountNumber;
 	float accountBalance;
-	bool payIn(float a);
+	bool payIn();
 	bool payOut();
-	Account();
+
 private:
 	int secretNumber;
-	
-};
 
+};

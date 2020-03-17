@@ -1,27 +1,28 @@
 #include "Account.h"
 
-/*Account::Account(){
-	depositAmount = 0;
-	accountBalance = 0;
-	accountNumber = accountNumber++;
-};
+Account::Account() {
+	accountBalance = 0.0f;
+	accountNumber = 0;
+	secretNumber = 0;
+}
 
- 
-/*bool Account::payIn(float a) {
+
+
+bool Account::payIn() {
 	float depositAmount;
-	depositAmount = a;
-	cout << "Amount to deposit: " << endl;
-	cin >> depositAmount;
+	depositAmount = 0;
+	std::cout << "Amount to deposit: " << std::endl;
+	std::cin >> depositAmount;
 
-	if (depositAmount > 0;) {
+	if (depositAmount > 0) {
 		Account::accountBalance = Account::accountBalance + depositAmount;
 		return true;
 	}
 	else return false;
-	
+
 }
 
-/*Account::Account.payOut(float) {
+/*Account::Account.payOut(float b) {
 	float withdrawAmount;
 	cout << "Amount to withdraw:" << endl;
 	cin >> withdrawAmount;

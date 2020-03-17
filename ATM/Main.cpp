@@ -1,5 +1,5 @@
-#include<iostream>;
-#include "Account.cpp";
+#include<iostream>
+#include "Account.h"
 using namespace std;
 
 //test
@@ -8,10 +8,10 @@ int main() {
 	Account TestAccount;
 	TestAccount.accountBalance = 100.00;
 	TestAccount.accountNumber = 1;
-	cout << accountBalance << endl;
+	cout << TestAccount.accountBalance << endl;
 
 	TestAccount.payIn();
-	TestAccount.payOut();
+	//TestAccount.payOut();
 
 
 
