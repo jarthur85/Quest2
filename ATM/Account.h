@@ -18,5 +18,5 @@ private:
 	
 
 };
-bool transferMoney(float moneyAmount, int checkingAccount, int otherCheckingAccount) {};
+//bool transferMoney(float moneyAmount, int checkingAccount, int otherCheckingAccount) {};
 

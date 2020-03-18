@@ -28,7 +28,7 @@ bool Account::payIn(float depositAmount) {
 }
 
 bool Account::payOut( float withdrawAmount) {
-	float withdrawAmount;
+	
 	std::cout << "Amount to withdraw:" << std::endl;
 	std::cin >> withdrawAmount;
 
@@ -41,11 +41,11 @@ bool Account::payOut( float withdrawAmount) {
 	else return false;
 
 }
-bool transferMoney(float transferAmount, int firstAccountNumber, int secondAccountNumber) {
+//bool transferMoney(float transferAmount, int firstAccountNumber, int secondAccountNumber) {
 
 	//add definition
 
-};
+//};
 
 
 

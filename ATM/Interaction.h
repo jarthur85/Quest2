@@ -1,10 +1,11 @@
 #pragma once
-class Interaction{ 
+class Interaction { 
 
 public:
-	int firstAccountNumber;
-	int secondAccountNumber;
-	float transferAmount;
+	Interaction();
+	int firstAccountNumber = 0;
+	int secondAccountNumber =0;
+	float transferAmount = 0;
 	char letter;
 
 };

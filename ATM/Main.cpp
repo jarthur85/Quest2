@@ -9,8 +9,8 @@ int main() {
 	TestAccount.accountBalance = 100.00;
 	TestAccount.accountNumber = 1;
 	cout << TestAccount.accountBalance << endl;
-
-	TestAccount.payIn();
+	float money;
+	TestAccount.payIn(money);
 	//TestAccount.payOut();
 
 
