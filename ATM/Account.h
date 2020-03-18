@@ -8,10 +8,15 @@ public:
 
 	int accountNumber;
 	float accountBalance;
-	bool payIn();
-	bool payOut();
+	float currentAmount;
+	bool payIn(float);
+	bool payOut(float);
+	
 
 private:
 	int secretNumber;
+	
 
 };
+bool transferMoney(float moneyAmount, int checkingAccount, int otherCheckingAccount) {};
+

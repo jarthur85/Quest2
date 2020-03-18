@@ -1,4 +1,9 @@
 #include "Account.h"
+#include "Database.h"
+#include "Interaction.h"
+#include <vector>
+
+
 
 Account::Account() {
 	accountBalance = 0.0f;
@@ -8,11 +13,11 @@ Account::Account() {
 
 
 
-bool Account::payIn() {
-	float depositAmount;
-	depositAmount = 0;
-	std::cout << "Amount to deposit: " << std::endl;
-	std::cin >> depositAmount;
+bool Account::payIn(float depositAmount) {
+	
+	
+	//std::cout << "Amount to deposit: " << std::endl;
+	//std::cin >> depositAmount;
 
 	if (depositAmount > 0) {
 		Account::accountBalance = Account::accountBalance + depositAmount;
@@ -22,17 +27,25 @@ bool Account::payIn() {
 
 }
 
-/*Account::Account.payOut(float b) {
+bool Account::payOut( float withdrawAmount) {
 	float withdrawAmount;
-	cout << "Amount to withdraw:" << endl;
-	cin >> withdrawAmount;
+	std::cout << "Amount to withdraw:" << std::endl;
+	std::cin >> withdrawAmount;
 
 	if (withdrawAmount > 0) {
-		accountBalance = accountBalance - withdrawAmount;
+		Account::accountBalance = Account::accountBalance - withdrawAmount;
 	}
 	if (accountBalance > 0) {
 		return true;
 	}
 	else return false;
 
-}*/
+}
+bool transferMoney(float transferAmount, int firstAccountNumber, int secondAccountNumber) {
+
+	//add definition
+
+};
+
+
+
