@@ -12,13 +12,9 @@ Account::Account() {
 }
 
 
-
+//check account number?
 bool Account::payIn(float depositAmount) {
 	
-	
-	//std::cout << "Amount to deposit: " << std::endl;
-	//std::cin >> depositAmount;
-
 	if (depositAmount > 0) {
 		Account::accountBalance = Account::accountBalance + depositAmount;
 		return true;
@@ -29,23 +25,31 @@ bool Account::payIn(float depositAmount) {
 
 bool Account::payOut( float withdrawAmount) {
 	
-	std::cout << "Amount to withdraw:" << std::endl;
-	std::cin >> withdrawAmount;
-
-	if (withdrawAmount > 0) {
+	if (withdrawAmount < Account::accountBalance) {
 		Account::accountBalance = Account::accountBalance - withdrawAmount;
-	}
-	if (accountBalance > 0) {
-		return true;
+
+		if (accountBalance > 0) {
+			return true;
+		}
 	}
 	else return false;
 
 }
-//bool transferMoney(float transferAmount, int firstAccountNumber, int secondAccountNumber) {
+void Account::setSecretNumber(int sn) {
+	secretNumber = sn;
+}
+Account account;
+bool transferMoney(float transferAmount, int firstAccount, int secondAccount) {
+	//add account info to know where to take and put money
+	account.payOut(transferAmount);
+	account.payIn(transferAmount);
 
-	//add definition
 
-//};
+};
+
+
+
+
 
 
 

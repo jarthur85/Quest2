@@ -8,5 +8,6 @@ public:
 	float transferAmount = 0;
 	char letter;
 
+	void  displayScreen() {};
 };
 

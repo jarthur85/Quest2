@@ -6,11 +6,11 @@ void displayScreen() {
 	char letter ='z';
 	switch (letter)
 	{
-	case 'A':
+	case 'A'://creat a new accout-also add withdraw and deposit
 	case 'a':
 		break;
 
-	case 'B':
+	case 'B': std::cout << Account::accountBalance << endl;
 	case 'b':
 		break;
 
@@ -25,13 +25,13 @@ void displayScreen() {
 		std::cin >> interaction.transferAmount;
 		std::cout << "Transferring " << interaction.transferAmount << "from " << interaction.firstAccountNumber <<
 			"to " << interaction.secondAccountNumber << std::endl;
-		//transferMoney(interaction.transferAmount, interaction.firstAccountNumber, interaction.secondAccountNumber);
+		bool transferMoney(float transferAmount, int firstAccount, int secondAccount);
 		break;
 	case 'L':
-	case'l':
+	case'l': Account::accountNumber = NULL;
 		break;
 
-	case 'E':
+	case 'E': system(CLS);
 	case 'e':
 		break;
 

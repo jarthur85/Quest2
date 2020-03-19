@@ -8,7 +8,8 @@ int main() {
 	Account TestAccount;
 	TestAccount.accountBalance = 100.00;
 	TestAccount.accountNumber = 1;
-	cout << TestAccount.accountBalance << endl;
+	TestAccount.setSecretNumber(1234);
+	cout <<"Your balance is: " << TestAccount.accountBalance << endl;
 	float money;
 	TestAccount.payIn(money);
 	//TestAccount.payOut();

@@ -7,16 +7,18 @@ public:
 	Account();
 
 	int accountNumber;
+	int currentAccount;
 	float accountBalance;
 	float currentAmount;
 	bool payIn(float);
 	bool payOut(float);
+	void setSecretNumber(int sn) {};
+
 	
 
 private:
-	int secretNumber;
-	
+	int secretNumber;//pin
+	};
 
-};
-//bool transferMoney(float moneyAmount, int checkingAccount, int otherCheckingAccount) {};
+bool transferMoney(float transferAmount, int firstAccount, int secondAccount) {};
 
