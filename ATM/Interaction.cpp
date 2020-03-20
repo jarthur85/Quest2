@@ -59,6 +59,7 @@ void Interaction::screenInteraction(char userChoice){
 		float withdraw;
 		std::cin >> withdraw;
 		account.payOut(withdraw ,account.accountNumber );
+		break;
 
 	case 'T':
 	case 't':
