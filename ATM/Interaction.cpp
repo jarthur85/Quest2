@@ -23,13 +23,26 @@ void Interaction::screenInteraction(char userChoice){
 	
 	switch (letter)
 	{
-	case 'A'://creat a new accout-also add withdraw and deposit
+	case 'A'://creat a new accout-
 	case 'a':
+		
 		break;
 
 	case 'B': std::cout << account.accountBalance << std::endl;
 	case 'b':
+		
 		break;
+	case 'M':
+	case'm': std::cout << "How much would you like to deposit?" << std::endl;
+		float deposit;
+		std::cin >> deposit;
+		account.accountBalance = account.accountBalance + deposit;
+		break;
+
+	case 'W':std::cout << "How much would you like to withdraw" << std::endl;
+		float withdraw;
+		std::cin >> withdraw;
+	case 'w': account.payOut(withdraw ,account.accountNumber );
 
 	case 'T':
 	case 't':
