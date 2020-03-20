@@ -10,8 +10,8 @@ public:
 	int currentAccount;
 	float accountBalance;
 	float currentAmount;
-	bool payIn(float);
-	bool payOut(float);
+	bool payIn(float, int);
+	bool payOut(float, int);
 	void setSecretNumber(int sn);
 
 
