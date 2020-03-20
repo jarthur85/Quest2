@@ -1,10 +1,26 @@
 #include "Interaction.h"
 #include"Account.h"
 
-//Interaction interaction;
-void Interaction::displayScreen() {
+
+char Interaction::displayScreen() {
+	std::cout << "What would you like to do? Pick a letter." << std::endl;
+	std::cout << "{A} Create New Account" << std::endl;
+	std::cout << "{B} Get Account Balance" << std::endl;
+	std::cout << "{M} Make a Deposit" << std::endl;
+	std::cout << "{W} Withdraw Money" << std::endl;
+	std::cout << "{T} Transfer Money" << std::endl;
+	std::cout << "{L} Log Out" << std::endl;
+	std::cout << "{E} Exit Program" << std::endl;
+	char choice;
+	std::cin >> choice;
+	return choice;
+}
+Interaction interaction;
+char userChoice = interaction.displayScreen();
+void Interaction::screenInteraction(char userChoice){
 	Account account ;
-	//char letter ='z';
+	letter = userChoice;
+	
 	switch (letter)
 	{
 	case 'A'://creat a new accout-also add withdraw and deposit
