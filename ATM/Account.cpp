@@ -14,7 +14,7 @@ Account::Account() {
 
 
 bool Account::payIn(float depositAmount, int currentAccount) {
-	Account::accountBalance = currentAccount;
+	Account::accountNumber = currentAccount;
 	if (depositAmount > 0) {
 		Account::accountBalance = Account::accountBalance + depositAmount;
 		return true;
@@ -24,7 +24,7 @@ bool Account::payIn(float depositAmount, int currentAccount) {
 }
 
 bool Account::payOut( float withdrawAmount, int currentAccount) {
-	Account::accountBalance = currentAccount;
+	Account::accountNumber = currentAccount;
 	if (withdrawAmount < Account::accountBalance) {
 		Account::accountBalance = Account::accountBalance - withdrawAmount;
 
@@ -41,13 +41,18 @@ void Account::setSecretNumber(int sn) {
 Account account;
 bool transferMoney(float transferAmount, int firstAccount, int secondAccount) {
 	//add account info to know where to take and put money
-	account.accountBalance = firstAccount;
+	account.accountNumber = firstAccount;
 	if (account.accountBalance > transferAmount) {
-		account.payOut(transferAmount);
+		account.payOut(transferAmount, firstAccount);
 	}
-	account.accountBalance = secondAccount;
+	account.accountNumber = secondAccount;
 	if(account.accountBalance)
-	account.payIn(transferAmount);
+	account.payIn(transferAmount, secondAccount);
+
+	if (!false) {
+		return true;
+	}
+	else return false;
 
 };
 
