@@ -19,13 +19,13 @@ void Interaction::displayScreen() {
 	case 't':
 
 		std::cout << "What is the account number you want to transfer money from: " << std::endl;
-		std::cin >> interaction.firstAccountNumber;
+		std::cin >> Interaction::firstAccountNumber;
 		std::cout << "What is the account number you want to transfer money too: " << std::endl;
-		std::cin >> interaction.secondAccountNumber;
+		std::cin >> Interaction::secondAccountNumber;
 		std::cout << " What is the amount you want to transfer: " << std::endl;
-		std::cin >> interaction.transferAmount;
-		std::cout << "Transferring " << interaction.transferAmount << "from " << interaction.firstAccountNumber <<
-			"to " << interaction.secondAccountNumber << std::endl;
+		std::cin >> Interaction::transferAmount;
+		std::cout << "Transferring " << Interaction::transferAmount << "from " 
+			<< Interaction::firstAccountNumber <<"to " << Interaction::secondAccountNumber << std::endl;
 		bool transferMoney(float transferAmount, int firstAccount, int secondAccount);
 		break;
 	case 'L':
