@@ -1,10 +1,12 @@
 #include "Interaction.h"
 #include"Account.h"
+#include"Database.h"
 
 
 char Interaction::displayScreen() {
 	std::cout << "What would you like to do? Pick a letter." << std::endl;
-	std::cout << "{A} Create New Account" << std::endl;
+	std::cout << "{A} Get started/Enter Account Number" << std::endl;
+	std::cout << "{O}Open a new Account" << std::endl;
 	std::cout << "{B} Get Account Balance" << std::endl;
 	std::cout << "{M} Make a Deposit" << std::endl;
 	std::cout << "{W} Withdraw Money" << std::endl;
@@ -23,13 +25,26 @@ void Interaction::screenInteraction(char userChoice){
 	
 	switch (letter)
 	{
-	case 'A'://creat a new accout-
-	case 'a':
+	case 'A':
+	case 'a': std::cout << "Enter account number: " << std::endl;
+		std::cin >> account.accountNumber;
 		
 		break;
+	case'O': 
+	case'o': 
+		std::cout << "Enter an account number: " << std::endl;
+		int number;
+		std::cin >> number;
+		account.accountNumber = number;
+		std::cout << "Enter a pin number: " << std::endl;
+		int pin;
+		std::cin >> pin;
+		account.setSecretNumber(pin);
+		//Database::append;
+		break;
 
-	case 'B': std::cout << account.accountBalance << std::endl;
-	case 'b':
+	case 'B': 
+	case 'b': std::cout << account.accountBalance << std::endl;
 		
 		break;
 	case 'M':
@@ -39,10 +54,11 @@ void Interaction::screenInteraction(char userChoice){
 		account.accountBalance = account.accountBalance + deposit;
 		break;
 
-	case 'W':std::cout << "How much would you like to withdraw" << std::endl;
+	case 'W':
+	case 'w': std::cout << "How much would you like to withdraw" << std::endl;
 		float withdraw;
 		std::cin >> withdraw;
-	case 'w': account.payOut(withdraw ,account.accountNumber );
+		account.payOut(withdraw ,account.accountNumber );
 
 	case 'T':
 	case 't':
