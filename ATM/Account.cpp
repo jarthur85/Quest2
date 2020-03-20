@@ -32,7 +32,7 @@ bool Account::payOut( float withdrawAmount) {
 			return true;
 		}
 	}
-	else return false;
+	 return false;
 
 }
 void Account::setSecretNumber(int sn) {
@@ -43,7 +43,6 @@ bool transferMoney(float transferAmount, int firstAccount, int secondAccount) {
 	//add account info to know where to take and put money
 	account.payOut(transferAmount);
 	account.payIn(transferAmount);
-
 
 };
 

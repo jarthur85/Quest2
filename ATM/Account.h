@@ -12,13 +12,13 @@ public:
 	float currentAmount;
 	bool payIn(float);
 	bool payOut(float);
-	void setSecretNumber(int sn) {};
+	void setSecretNumber(int sn);
 
-	
+
 
 private:
 	int secretNumber;//pin
-	};
+};
 
-bool transferMoney(float transferAmount, int firstAccount, int secondAccount) {};
+bool transferMoney(float transferAmount, int firstAccount, int secondAccount);
 

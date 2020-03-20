@@ -1,16 +1,17 @@
 #include "Interaction.h"
 #include"Account.h"
 
-Interaction interaction;
-void displayScreen() {
-	char letter ='z';
+//Interaction interaction;
+void Interaction::displayScreen() {
+	Account account ;
+	//char letter ='z';
 	switch (letter)
 	{
 	case 'A'://creat a new accout-also add withdraw and deposit
 	case 'a':
 		break;
 
-	case 'B': std::cout << Account::accountBalance << endl;
+	case 'B': std::cout << account.accountBalance << std::endl;
 	case 'b':
 		break;
 
@@ -28,10 +29,10 @@ void displayScreen() {
 		bool transferMoney(float transferAmount, int firstAccount, int secondAccount);
 		break;
 	case 'L':
-	case'l': Account::accountNumber = NULL;
+	case'l': account.accountNumber = NULL;
 		break;
 
-	case 'E': system(CLS);
+	case 'E': //return 0;
 	case 'e':
 		break;
 

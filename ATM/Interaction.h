@@ -2,12 +2,12 @@
 class Interaction { 
 
 public:
-	Interaction();
+	Interaction() {};
 	int firstAccountNumber = 0;
 	int secondAccountNumber =0;
 	float transferAmount = 0;
 	char letter;
 
-	void  displayScreen() {};
+	void displayScreen();
 };
 
